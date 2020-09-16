@@ -58,7 +58,7 @@ class FindSpotViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FinishSpot" {
-            let controller = segue.destination as! SpotMapViewController
+            let controller = segue.destination as! MapSpotViewController
             let locationDetails = sender as!  (String, CLLocationCoordinate2D)
             controller.location = locationDetails.0
             controller.coordinate = locationDetails.1

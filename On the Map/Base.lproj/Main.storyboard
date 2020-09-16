@@ -325,11 +325,11 @@
             </objects>
             <point key="canvasLocation" x="4159.420289855073" y="-199.55357142857142"/>
         </scene>
-        <!--Spot Map View Controller-->
+        <!--Map Spot View Controller-->
         <scene sceneID="Xyy-zh-pNc">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjP-EM-oHs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="EIh-uI-cvy" customClass="SpotMapViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EIh-uI-cvy" customClass="MapSpotViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IMe-A4-Tau">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,7 +345,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="tappedFinish:" destination="EIh-uI-cvy" eventType="touchUpInside" id="ScS-x9-bCq"/>
+                                    <action selector="tappedFinish:" destination="EIh-uI-cvy" eventType="touchUpInside" id="ITi-Hg-Tvw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -361,6 +361,9 @@
                         <viewLayoutGuide key="safeArea" id="kGC-09-6YF"/>
                     </view>
                     <navigationItem key="navigationItem" id="llP-DT-BNv"/>
+                    <connections>
+                        <outlet property="mapView" destination="3RH-FO-SbY" id="03k-Ov-4uS"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="4913.04347826087" y="-195.53571428571428"/>

@@ -16,8 +16,8 @@
 		01434B5925100DDD00D37333 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01434B5825100DDD00D37333 /* MapViewController.swift */; };
 		01434B5B25100E4600D37333 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01434B5A25100E4600D37333 /* ListViewController.swift */; };
 		01434B5F2510229900D37333 /* FindSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01434B5E2510229900D37333 /* FindSpotViewController.swift */; };
-		01434B6325129CCC00D37333 /* SpotMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01434B6225129CCC00D37333 /* SpotMapViewController.swift */; };
 		01434B652512ABE500D37333 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01434B642512ABE500D37333 /* UIViewControllerExtension.swift */; };
+		01434B682512BDBF00D37333 /* MapSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01434B672512BDBF00D37333 /* MapSpotViewController.swift */; };
 		016DD1F425002C41000843E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DD1F325002C41000843E0 /* AppDelegate.swift */; };
 		016DD1F625002C41000843E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DD1F525002C41000843E0 /* SceneDelegate.swift */; };
 		016DD1F825002C41000843E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DD1F725002C41000843E0 /* LoginViewController.swift */; };
@@ -39,8 +39,8 @@
 		01434B5825100DDD00D37333 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		01434B5A25100E4600D37333 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		01434B5E2510229900D37333 /* FindSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSpotViewController.swift; sourceTree = "<group>"; };
-		01434B6225129CCC00D37333 /* SpotMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMapViewController.swift; sourceTree = "<group>"; };
 		01434B642512ABE500D37333 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		01434B672512BDBF00D37333 /* MapSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSpotViewController.swift; sourceTree = "<group>"; };
 		016DD1F025002C41000843E0 /* On the Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On the Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		016DD1F325002C41000843E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		016DD1F525002C41000843E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 				01434B5825100DDD00D37333 /* MapViewController.swift */,
 				01434B5A25100E4600D37333 /* ListViewController.swift */,
 				01434B5E2510229900D37333 /* FindSpotViewController.swift */,
-				01434B6225129CCC00D37333 /* SpotMapViewController.swift */,
 				01434B642512ABE500D37333 /* UIViewControllerExtension.swift */,
+				01434B672512BDBF00D37333 /* MapSpotViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 				01434B55250FECAD00D37333 /* StudentLocationResponse.swift in Sources */,
 				01434B57250FECCE00D37333 /* LoginResposne.swift in Sources */,
 				016DD1F625002C41000843E0 /* SceneDelegate.swift in Sources */,
-				01434B6325129CCC00D37333 /* SpotMapViewController.swift in Sources */,
+				01434B682512BDBF00D37333 /* MapSpotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
