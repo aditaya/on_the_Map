@@ -102,8 +102,8 @@ class MapViewController: UIViewController {
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "addSpot" {
-                let destinationVC = segue.destination as? FindSpotViewController
-                let updateStudentInfo = sender as? (Bool, [StudentLocation])
+                _ = segue.destination as? FindSpotViewController
+                _ = sender as? (Bool, [StudentLocation])
 //                destinationVC?.updatePin = updateStudentInfo?.0
 //                destinationVC?.studentArray = updateStudentInfo?.1
             }
