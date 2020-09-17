@@ -17,62 +17,62 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         DispatchQueue.main.async {
-                  self.emailTextField.becomeFirstResponder()
-              }
-              activityIndicator.hidesWhenStopped = true
-              
+        DispatchQueue.main.async {
+            self.emailTextField.becomeFirstResponder()
+        }
+        activityIndicator.hidesWhenStopped = true
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-              view.addGestureRecognizer(tap)
+        view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         emailTextField.text = ""
         passwordTextField.text = ""
     }
-
+    
     @IBAction func loginButton(_ sender: UIButton) {
-        
-       LocationModel.login(with: emailTextField.text!, password: passwordTextField.text!, completion: handleLoginResponse(success:error:))
-        
-         }
-
-         
-
-         func setLoggingIn(_ loggingIn: Bool) {
-             if loggingIn {
-                 activityIndicator.startAnimating()
-             } else {
-                 activityIndicator.stopAnimating()
-             }
-         }
-         
-         func showLoginFailure(message: String) {
-             let alertVC = UIAlertController(title: "Login Failed", message: message, preferredStyle: .alert)
-             alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-             show(alertVC, sender: nil)
-         }
+        setLoggingIn(true)
+        LocationModel.login(with: emailTextField.text!, password: passwordTextField.text!, completion: handleLoginResponse(success:error:))
+    }
+    
+    
+    
+    func setLoggingIn(_ loggingIn: Bool) {
+        if loggingIn {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+    }
+    
+    func showLoginFailure(message: String) {
+        let alertVC = UIAlertController(title: "Login Failed", message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        show(alertVC, sender: nil)
+    }
     
     @IBAction func signUpButton(_ sender: UIButton) {
         
-    UIApplication.shared.open(URL(string: "https://auth.udacity.com/sign-up")!, options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: "https://auth.udacity.com/sign-up")!, options: [:], completionHandler: nil)
     }
     
     func handleLoginResponse(success: Bool, error: Error?){
-     
-         if success {
-             performSegue(withIdentifier: "loginSuccess", sender: nil)
-             setLoggingIn(true)
-         }
-         else {
-       
+        
+        if success {
+            performSegue(withIdentifier: "loginSuccess", sender: nil)
+            setLoggingIn(true)
+        }
+        else {
+            
             showLoginFailure(message: error?.localizedDescription ?? "Wrong Email or Password!!")
             setLoggingIn(false)
-         }
-       }
+        }
+    }
     @objc override func dismissKeyboard() {
-           view.endEditing(true)
-       }
-   
+        view.endEditing(true)
+    }
+    
 }
 

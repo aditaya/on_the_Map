@@ -19,6 +19,7 @@ class MapViewController: UIViewController {
        override func viewDidLoad() {
            super.viewDidLoad()
            self.mapView.delegate = self
+           self.activityIndicator.hidesWhenStopped = true
            
        }
        
@@ -34,26 +35,28 @@ class MapViewController: UIViewController {
         activityIndicator.startAnimating()
                let alertVC = UIAlertController(title: "Warning!", message: "You've already put your pin on the map.\nWould you like to overwrite it?", preferredStyle: .alert)
                
-             LocationModel.getStudentLocation(singleStudent: false, completion:{ (data, error) in
-                   
-                   guard let data = data else {
-                       print(error?.localizedDescription ?? "")
-                       return
-                   }
-                   if data.count > 0 {
-                   alertVC.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [unowned self] (_) in
-                       self.performSegue(withIdentifier: "addSpot",  sender: (true, data))
-                   }))
-               
-                   alertVC.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
-                   self.present(alertVC, animated: true, completion: nil)
-                  } else {
-                       self.performSegue(withIdentifier: "addPin", sender: (false, []))
+            LocationModel.getStudentLocation(singleStudent: false, completion:{ (data, error) in
 
-                   }
-                   
-               })
-               self.activityIndicator.stopAnimating()
+                        self.activityIndicator.stopAnimating()
+
+                        guard let data = data else {
+                            print(error?.localizedDescription ?? "")
+                            return
+                        }
+                        if data.count > 0 {
+                            alertVC.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [unowned self] (_) in
+                                self.performSegue(withIdentifier: "addSpot",  sender: (true, data))
+                            }))
+
+                            alertVC.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+                            self.present(alertVC, animated: true, completion: nil)
+                        } else {
+                            self.performSegue(withIdentifier: "addPin", sender: (false, []))
+
+                        }
+
+                    })
+               
     }
     
     @IBAction func refreshPressed(_ sender: Any) {

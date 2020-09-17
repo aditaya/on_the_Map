@@ -32,6 +32,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
          self.tableView.dataSource = self
          self.tableView.delegate = self
          self.refreshStudentPinList()
+        self.activityIndicator.hidesWhenStopped = true
          
      }
      
@@ -59,7 +60,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let app = UIApplication.shared
+        let app = UIApplication.shared 
         app.open(URL(string: studentLocArray[indexPath.row].mediaURL) ?? URL(string: "")!, options: [:], completionHandler: nil)
             
     }
@@ -88,7 +89,10 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
              
          DispatchQueue.main.async {
              guard let data = data else {
-                 print(error?.localizedDescription ?? "")
+                
+            let alertV = UIAlertController(title: "Error!", message: error?.localizedDescription ?? "Unknown Error", preferredStyle: .alert)
+                alertV.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertV,animated: true, completion: nil)
                  return
              }
              StudentsLocationData.studentsData = data

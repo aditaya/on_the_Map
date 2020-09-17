@@ -44,8 +44,7 @@ class FindSpotViewController: UIViewController {
                 showAlert(title: "Empty Media Field", message: "You must provide a url.")
                 return
             }
-            // var mediaUrl: String
-            
+          
             mediaUrl = urlText.prefix(7).lowercased().contains("http://") || urlText.prefix(8).lowercased().contains("https://") ? urlText : "https://" + urlText
             
             
@@ -82,7 +81,7 @@ class FindSpotViewController: UIViewController {
         
         self.setGeoCodingStatus(true)
         CLGeocoder().geocodeAddressString(location) { (placemark, error) in
-            
+            self.setGeoCodingStatus(false)
             guard error == nil else {
                 self.showAlert(title: "Failed", message: "Can not find spot: \(location)")
                 return

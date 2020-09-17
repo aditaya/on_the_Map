@@ -28,7 +28,7 @@
                                         <rect key="frame" x="0.0" y="65" width="310" height="45"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="310" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9K-5j-imk">
                                         <rect key="frame" x="0.0" y="130" width="310" height="40"/>
@@ -328,7 +328,6 @@
         <!--Map Spot View Controller-->
         <scene sceneID="Xyy-zh-pNc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DjP-EM-oHs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="EIh-uI-cvy" customClass="MapSpotViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IMe-A4-Tau">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -365,6 +364,7 @@
                         <outlet property="mapView" destination="3RH-FO-SbY" id="03k-Ov-4uS"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DjP-EM-oHs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4913.04347826087" y="-195.53571428571428"/>
         </scene>
@@ -407,7 +407,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VfR-1j-F6c"/>
+        <segue reference="vsa-tv-g91"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="List" width="42.666667938232422" height="42.666667938232422"/>

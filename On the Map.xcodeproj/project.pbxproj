@@ -65,6 +65,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0123F8E12513AD8A00D5174A /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				016DD1F925002C41000843E0 /* Main.storyboard */,
+				016DD20125002C44000843E0 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		0123F8E22513AD9B00D5174A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				016DD1FF25002C44000843E0 /* Assets.xcassets */,
+				016DD20425002C44000843E0 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0123F8E32513ADAA00D5174A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				01434B642512ABE500D37333 /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		01434B4A250FE8E100D37333 /* Request & Response */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +112,6 @@
 				01434B5825100DDD00D37333 /* MapViewController.swift */,
 				01434B5A25100E4600D37333 /* ListViewController.swift */,
 				01434B5E2510229900D37333 /* FindSpotViewController.swift */,
-				01434B642512ABE500D37333 /* UIViewControllerExtension.swift */,
 				01434B672512BDBF00D37333 /* MapSpotViewController.swift */,
 			);
 			path = Controller;
@@ -116,10 +141,9 @@
 				01A9D7692501757C00581539 /* Model */,
 				01434B4A250FE8E100D37333 /* Request & Response */,
 				01434B53250FEA0E00D37333 /* Controller */,
-				016DD1F925002C41000843E0 /* Main.storyboard */,
-				016DD1FF25002C44000843E0 /* Assets.xcassets */,
-				016DD20125002C44000843E0 /* LaunchScreen.storyboard */,
-				016DD20425002C44000843E0 /* Info.plist */,
+				0123F8E32513ADAA00D5174A /* Extension */,
+				0123F8E12513AD8A00D5174A /* StoryBoard */,
+				0123F8E22513AD9B00D5174A /* Resources */,
 				016DD1FC25002C41000843E0 /* On_the_Map.xcdatamodeld */,
 			);
 			path = "On the Map";
@@ -366,7 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T5H86963R;
-				INFOPLIST_FILE = "On the Map/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/On the Map/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T5H86963R;
-				INFOPLIST_FILE = "On the Map/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/On the Map/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,7 +16,7 @@ class MapSpotViewController: UIViewController {
     
     var location: String!
     var coordinate: CLLocationCoordinate2D!
-    var updatePin: Bool!
+    var updatePin: Bool = true
     var url: String!
     var studentLocArray: [StudentLocation]!
 
@@ -24,8 +24,7 @@ class MapSpotViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +36,7 @@ class MapSpotViewController: UIViewController {
         
         addSpot(coordinate: coordinate)
     }
-    
+// MARK: - Update User Data and URL
     @IBAction func tappedFinish(_ sender: Any) {
    print("OK Aditya")
     
@@ -62,7 +61,8 @@ class MapSpotViewController: UIViewController {
 
 
             // network request
-            self.updatePin ? self.updateExistedSpot(postLocationData: studentLocationRequest) : self.postSpot(postLocationData: studentLocationRequest)
+            
+               self.updatePin ? self.updateExistedSpot(postLocationData: studentLocationRequest) : self.postSpot(postLocationData: studentLocationRequest)
         }
 
     }
